@@ -147,18 +147,19 @@ def trekk(antall=1):
       kulenr=randint(1,len(eske))
       if eske[kulenr-1]==1:
         raude = raude+1
-        resultatstreng=resultatstreng+" **:red[R]**"
+        #resultatstreng=resultatstreng+" **:red[R]**"
+        resultatstreng=resultatstreng+" 🔴"
       else:
-        resultatstreng=resultatstreng+" **:blue[B]**"
+        resultatstreng=resultatstreng+" 🔵"
         blaa=blaa+1
   else:
     for i in range(antall):
       kulenr=randint(1,len(eske))
       if eske[kulenr-1]==1:
         raude = raude+1
-        resultatstreng=resultatstreng+" **:red[R]**"
+        resultatstreng=resultatstreng+" 🔴"
       else:
-        resultatstreng=resultatstreng+" **:blue[B]**"
+        resultatstreng=resultatstreng+" 🔵"
         blaa=blaa+1
       eske.pop(kulenr-1)
       
@@ -202,7 +203,7 @@ with tab1:
           #kat.append(k)
           val.append(a)
         st.bar_chart(val, x_label=translations[selection]['antall raude'], y_label=translations[selection]['antall gongar'], )
-
+  
 with tab2:
   def trekk_mod2():
     if tilbakelegging2==True:
@@ -236,11 +237,11 @@ with tab2:
         eske[j]=eske[j]+1
       while not trekk_mod2():
         if antall_simuleringar2<30:
-          resultatstreng2=resultatstreng2+" **:blue[B]**"
+          resultatstreng2=resultatstreng2+" 🔵"
         teller=teller+1
       resultater2.append(teller)
       if antall_simuleringar2<30:
-        resultatstreng2=resultatstreng2+" **:red[R]**"
+        resultatstreng2=resultatstreng2+" 🔴"
         st.write(resultatstreng2)
         if antall_simuleringar2<20:
           st.write(translations[selection]['du måtte trekkje'],teller, translations[selection]['gongar før første'])
@@ -288,10 +289,10 @@ with tab3:
       while tell_raude<raude_i_esken3:
         if trekk3():
           tell_raude=tell_raude+1
-          resultatstreng3=resultatstreng3+" **:red[R ]**"
+          resultatstreng3=resultatstreng3+" 🔴"
           
         else:
-          resultatstreng3=resultatstreng3+" **:blue[B]**"
+          resultatstreng3=resultatstreng3+" 🔵"
           
         antall_trekk=antall_trekk+1
 
