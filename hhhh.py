@@ -4,8 +4,8 @@ from random import randint
 st.title("Simulering av myntkast")
 
 # Brukerinput
-antallkast = st.number_input("Kor mange kast skal vi ha?", min_value=1, step=1)
-antallrunder = st.number_input(f"...og kor mange simuleringar skal vi gjera av desse {antallkast} kasta?", min_value=1, step=1)
+antallkast = st.number_input("Kor mange kast skal vi ha?", min_value=1, value=5, step=1)
+antallrunder = st.number_input(f"...og kor mange simuleringar skal vi gjera av desse {antallkast} kasta?", min_value=1, value=5, step=1)
 
 # Kjør simulering når brukeren trykker på knappen
 if st.button("Køyr simulering"):
