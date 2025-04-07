@@ -19,13 +19,13 @@ if st.button("Køyr simulering"):
         resultat = ""
         for i in range(antallkast):
             penge = randint(1, 2)
-            resultat += "H" if penge == 1 else "T"
+            resultat += " :red[H]" if penge == 1 else " :blue[T]"
 
-        st.text(resultat)
+        st.write(resultat)
 
         # Sjekk mønstre
-        inneholder_hhhh = "HHHH" in resultat
-        inneholder_hhht = "HHHT" in resultat
+        inneholder_hhhh = " :red[H] :red[H] :red[H] :red[H]" in resultat
+        inneholder_hhht = " :red[H] :red[H] :red[H] :blue[T]" in resultat
 
         if inneholder_hhhh and not inneholder_hhht:
             hhhh += 1
