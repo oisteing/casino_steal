@@ -6,8 +6,8 @@ st.title("Trekke brikker ⚫⚪")
 st.write("Du har ein pose med svarte og kvite brikker. Du får trekkje ein og så leggje den tilbake.")
 
 # Brukar vel kor mange brikker og utdrag
-n = st.number_input("Kor mange brikker er det i posen?", min_value=1, step=1, key="n_brikkar")
-u = st.number_input("Kor mange gonger vil du trekkje ein brikke (altså med tilbakelegging)?", min_value=1, step=1, key="u_utdrag")
+n = st.number_input("Kor mange brikker er det i posen?", min_value=1, step=1, , value=10, key="n_brikkar")
+u = st.number_input("Kor mange gonger vil du trekkje ein brikke (altså med tilbakelegging)?", min_value=1, , value=5, step=1, key="u_utdrag")
 
 # Knapp 1: Kjør simulering
 if st.button("Køyr simulering"):
