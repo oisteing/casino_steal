@@ -10,7 +10,7 @@ pages = {
         st.Page("halfmean.py", title="Half of the average"),
         st.Page("kombikalk2.py", title="Kombinatorikk"),
         st.Page("binomisk.py", title="Binomialfordeling"),
-        st.Page("formelsamling.py", title="Formelsamling")
+        st.Page("formelark.py", title="Formelsamling")
     ],
 }
 
