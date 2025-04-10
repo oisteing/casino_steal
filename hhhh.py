@@ -35,19 +35,18 @@ if st.button("Køyr simulering"):
         inneholder_hhhh = lengde* " **:red[K]**" in resultat
         inneholder_hhht = (lengde-1)* " **:red[K]**" +" **:blue[M]**" in resultat
 
-        if antallrunder<50:
-            if inneholder_hhhh and not inneholder_hhht:
-                hhhh += 1
-                st.write("→ "+lengde*" **:red[K]**")
-            elif inneholder_hhht and not inneholder_hhhh:
-                hhht += 1
-                st.write("→ "+(lengde-1)*" **:red[K]**"+" **:blue[M]**")
-            elif inneholder_hhhh and inneholder_hhht:
-                begge += 1
-                st.write("→ Begge mønstra")
-            else:
-                ingen += 1
-                st.write("→ Ingen av mønstra")
+        if inneholder_hhhh and not inneholder_hhht:
+            hhhh += 1
+            st.write("→ "+lengde*" **:red[K]**")
+        elif inneholder_hhht and not inneholder_hhhh:
+            hhht += 1
+            st.write("→ "+(lengde-1)*" **:red[K]**"+" **:blue[M]**")
+        elif inneholder_hhhh and inneholder_hhht:
+            begge += 1
+            st.write("→ Begge mønstra")
+        else:
+            ingen += 1
+            st.write("→ Ingen av mønstra")
 
     st.write("---")
     st.write("## Oppsummering:")
